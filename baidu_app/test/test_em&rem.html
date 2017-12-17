@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {margin: 0;padding: 0}
+        html {font-size: 18px}
+        .em {
+            /* font-size: 20px; */
+        }
+        .gg {
+            /* font-size: 50px; */
+        }
+        .em-box {
+            /*1em === 16px(相对于自身的font-size大小，如果自身没设置的话，就相对于父元素，一层一层往上找，直到html)*/
+            width: 10em;
+            height: 10em;
+            /* font-size: 16px; */
+            background-color:hotpink ;
+        }
+        .rem-box {
+            /*1rem == 16px(html根元素的font-size大小)*/
+            width: 10rem;
+            height: 10rem;
+            font-size: 12px;
+            background-color: skyblue;
+        }
+      
+    </style>
+</head>
+<body>
+<!--em设置div尺寸-->
+<div class="gg">
+    <div class="em">
+        <div class="em-box"></div>
+    </div>
+</div>
+<!--rem设置div尺寸-->
+<div class="rem-box"></div>
+</body>
+</html>

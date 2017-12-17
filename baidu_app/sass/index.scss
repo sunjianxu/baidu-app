@@ -1,0 +1,2055 @@
+@import "normalize6.0.scss";
+@import "swiper.min.scss";
+@import "base.scss";
+@import "mixin.scss";
+html,body {
+  height: 100%;
+}
+/*loading页面*/
+.loading {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffece9;
+  z-index: 3;
+  .rider{
+    position: absolute;
+    @include size(154,121);
+    top: p2r(233);
+    right: p2r(108);
+    @include bg("../img/loading/rider1_.png");
+  }
+  .progress {
+    position: absolute;
+    @include size(416,20);
+    top:p2r(354);
+    left: 50%;
+    margin-left:(-416/32/2)*1rem;
+    background-color: transparent;
+    border: 2px solid #373837;
+    -webkit-border-radius:p2r(20);
+    -moz-border-radius:p2r(20);
+    border-radius:p2r(20);
+    display: flex; 
+  }
+  .info {
+    @include size(220,28);
+    @include bgct("../img/loading/loading-txt.png",220,414);
+  }
+  .logo {
+    @include size(162,39);
+    @include bgcb("../img/loading/waimai-logo.png",162,122);
+
+  }
+  .copyright {
+    position: absolute;
+    bottom:p2r(74);
+    font-size: p2r(24);
+    width: 100%;
+    text-align: center;
+    color: #ff7b89;
+  }
+}
+
+/*welcome页面*/
+.welcome {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #00befd;
+  z-index: 2;
+  .title{
+    @include size(397,224);
+    @include bgct("../img/page1/theme-title.png",397,42);
+    .hello{
+      @include size(70,75);
+      position: absolute;
+      top:p2r(20);
+      right:p2r(8);
+      @include bg("../img/page1/hello.png");
+    }
+  }
+  .cloud {
+    @include size(640,673);
+    position: absolute;
+    bottom: 0;
+    @include bg("../img/page1/clouds.png");
+  }
+  .tree {
+    @include size(559,71);
+    @include bgcb("../img/page1/trees.png",559,352);
+  }
+  .grass1 {
+    @include size(640,396);
+    @include bgcb("../img/page1/grass1.png",640,0);
+  }
+  .grass2 {
+    @include size(640,228);
+    @include bgcb("../img/page1/grass2.png",640,0);
+  }
+  .bearWrapper {
+    @include size(167,279);
+    position: absolute;
+    bottom: p2r(346);
+    left:50%;
+    margin-left:(-167/32/2)*1rem;
+    .bear {
+      @include size(167,279);
+      position: absolute;
+      top:0;
+      left:0;
+      @include  bg("../img/page1/rider2.png");
+    }
+    .smoke {
+      @include size(167,32);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include bg("../img/page1/jet1.png");
+    }
+  }
+  .btnWrapper {
+    @include size(208,208);
+    position: absolute;
+    bottom:p2r(86);
+    left:50%;
+    margin-left:(-208/32/2)*1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle1{
+      width:100%;
+      height:100%;
+      position: absolute;
+      top:0;
+      left:0;
+      @include  bg("../img/page1/circle1.png");
+    }
+    .circle2{
+      width:100%;
+      height:100%;
+      position: absolute;
+      top:0;
+      left:0;
+      @include bg("../img/page1/circle2.png");
+    }
+    .btn {
+      width: p2r(124);
+      height: p2r(113);
+      @include bg("../img/page1/bear-btn-pre.png");
+    }
+  }
+  .text {
+    width: 100%;
+    height: p2r(32);
+    position: absolute;
+    bottom: p2r(38);
+    text-align: center;
+    color: #506000;
+  }
+}
+
+/*swiper模块*/
+.title{
+  position: absolute;
+  top:p2r(32);
+  left: p2r(32);
+  h3{
+    font-size: p2r(64);
+    color: #fff;
+    padding-left:p2r(20);
+  }
+  p{
+    font-size: p2r(24);
+    color: #fff;
+    padding-left:p2r(20);
+    padding-top:p2r(12);
+  }
+  .line{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: p2r(5);
+    height: 100%;
+    background-color: #fff;
+  }
+}
+/*滑动页面1*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.swiper-container .page1{
+  background-color: #BE8452;
+  .scrollPage1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .bg {
+      @include size(576,573);
+      @include bgcb("../img/page2/bg1.png",576,252);
+    }
+    .person {
+      @include size(439,349);
+      @include bgcb("../img/page2/front1.png",439,290);
+      z-index: 1;
+      .paperWrapper{
+        @include size(85,50);
+        background-image: url("../img/page2/papers.png");
+        background-repeat: no-repeat;
+        background-size: p2r(115) p2r(114);
+        background-position: bottom right;
+        position: absolute;
+        left: p2r(27);
+        bottom: p2r(104);
+        .paper1 {
+          @include size(86,26);
+          background-image: url("../img/page2/papers.png");
+          background-repeat: no-repeat;
+          background-size: p2r(115) p2r(114);
+          background-position: 0 p2r(-32);
+          position: absolute;
+          left: p2r(-70);
+          bottom: p2r(45);
+        }
+        .paper2{
+          @include size(64,20);
+          background-image: url("../img/page2/papers.png");
+          background-repeat: no-repeat;
+          background-size: p2r(115) p2r(114);
+          background-position: p2r(-45) p2r(0);
+          position: absolute;
+          bottom: p2r(80);
+          right:0;
+        }
+      }
+    }
+    .textWrapper {
+      @include size(363,119);
+      position: absolute;
+      right: p2r(140);
+      bottom: p2r(140);
+      @include bg("../img/page2/txt-bubbl.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      .text {
+        @include size(220,30);
+        position: absolute;
+        @include bg("../img/page2/txt-work.png");
+      }
+    }
+  }
+  .scrollPage2 {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    .bg {
+      @include size(582,520);
+      @include bgcb("../img/page2/bg2.png",582,252);
+    }
+    .person {
+      @include size(436,332);
+      @include bgcb("../img/page2/relax.png",436,270);
+      z-index: 1;
+      .legWrapper{
+        @include size(113,71);
+        position: absolute;
+        left: p2r(193);
+        bottom: p2r(110);
+        .leg1 {
+          @include size(113,24);
+          @include bg("../img/page2/leg1.png");
+          position: absolute;
+          left: p2r(2);
+          bottom: 0;
+        }
+        .leg2{
+          @include size(85,71);
+          @include bg("../img/page2/leg2.png");
+          position: absolute;
+          left: 0;
+          bottom: p2r(10);
+        }
+      }
+    }
+    .textWrapper {
+      @include size(363,119);
+      position: absolute;
+      right: p2r(140);
+      bottom: p2r(140);
+      @include bg("../img/page2/txt-bubbl.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      .text {
+        @include size(224,31);
+        position: absolute;
+        @include bg("../img/page2/txt-life.png");
+      }
+    }
+  }
+  .scrollPage3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .bg {
+      @include size(561,516);
+      @include bgcb("../img/page2/bg3.png",561,252);
+    }
+    .person {
+      @include size(503,229);
+      @include bgcb("../img/page2/person.png",503,300);
+      z-index: 1;
+      .word1 {
+        @include size(92,83);
+        @include bg("../img/page2/word1.png");
+        position: absolute;
+        left: p2r(7);
+        bottom: p2r(194);
+      }
+      .word2{
+        @include size(77,70);
+        @include bg("../img/page2/word2.png");
+        position: absolute;
+        left: p2r(115);
+        bottom: p2r(245);
+      }
+      .word3{
+        @include size(115,104);
+        @include bg("../img/page2/word3.png");
+        position: absolute;
+        right: p2r(130);
+        bottom: p2r(220);
+      }
+      .word4{
+        @include size(79,73);
+        @include bg("../img/page2/word4.png");
+        position: absolute;
+        right: p2r(12);
+        bottom: p2r(230);
+      }
+
+    }
+    .textWrapper {
+      @include size(363,119);
+      position: absolute;
+      right: p2r(140);
+      bottom: p2r(140);
+      @include bg("../img/page2/txt-bubbl.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      .text {
+        @include size(224,31);
+        position: absolute;
+        @include bg("../img/page2/txt-life.png");
+      }
+    }
+  }
+  .star{
+    @include size(640,356);
+    position: absolute;
+    bottom: 0;
+    @include bg("../img/page2/sphere1.png")
+  }
+  .bear {
+    @include size(178,134);
+    position: absolute;
+    bottom: 0;
+    right: p2r(38);
+    @include bg("../img/page2/bear1.png");
+  }
+}
+.swiper-container .page2{
+  background-color: #EF4143;
+  .bg {
+    @include size(592,490);
+    @include bgcb('../img/page3/bg4_.png',592,330);
+  }
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,356);
+    @include bg('../img/page3/sphere2.png');
+  }
+  .bearWrapper{
+    .bear{
+      @include size(227,336);
+      background-image: url("../img/page3/bear2.png");
+      background-position: p2r(-103) p2r(-96);
+      background-size: p2r(368) p2r(427);
+      position: absolute;
+      left: 50%;
+      margin-left:(-227/32/2)*1rem;
+      bottom: p2r(310);
+      .face1{
+        @include size(102,102);
+        position: absolute;
+        top:0;
+        left: p2r(-102);
+        @include bg('../img/page3/face1.png');
+      }
+      .face2{
+        @include size(101,102);
+        position: absolute;
+        top:0;
+        right: p2r(-101);
+        @include bg('../img/page3/face2.png');
+      }
+      .handLeft {
+        @include size(74,77);
+        position: absolute;
+        left: p2r(30);
+        top:p2r(180);
+        @include bg('../img/page3/hand-left_.png');
+      }
+      .handRight{
+        @include size(74,77);
+        position: absolute;
+        right: p2r(30);
+        top:p2r(180);
+        @include bg('../img/page3/hand-right.png');
+      }
+    }
+
+  }
+  .table {
+    @include size(514,258);
+    @include bgcb('../img/page3/table.png',514,140)
+  }
+  .food {
+    @include size(354,152);
+    @include bgcb('../img/page3/foods.png',354,330);
+  }
+}
+.swiper-container .page3{
+  background-color: #DD8903;
+  .bg {
+    @include size(592,580);
+    @include bgcb('../img/page4/bg5.png',592,330);
+  }
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,356);
+    @include bg('../img/page4/sphere3.png');
+  }
+  .slogan1{
+    position: absolute;
+    left: p2r(40);
+    bottom: p2r(500);
+    @include size(197,140);
+    @include bg('../img/page4/license.png');
+  }
+  .slogan2 {
+    @include size(205,107);
+    @include bgcb('../img/page4/oil.png',205,660);
+  }
+  .slogan3 {
+    position: absolute;
+    right: p2r(30);
+    bottom: p2r(480);
+    @include size(198,162);
+    @include bg('../img/page4/evil2.png');
+  }
+  .bear {
+    @include size(206,321);
+    @include bgcb('../img/page4/bear3.png',206,195);
+  }
+}
+.swiper-container .page4{
+  background-color: #40A000;
+  .bg {
+    @include size(588,333);
+    @include bgcb('../img/page5/bg6.png',588,330);
+  }
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,356);
+    @include bg('../img/page5/sphere4.png');
+  }
+  .card1{
+    position: absolute;
+    left: p2r(30);
+    bottom: p2r(435);
+    @include size(160,175);
+    @include bg('../img/page5/card1.png');
+  }
+  .card2 {
+    @include size(161,200);
+    @include bgcb('../img/page5/card2.png',161,530);
+  }
+  .card3 {
+    position: absolute;
+    right: p2r(45);
+    bottom: p2r(420);
+    @include size(167,184);
+    @include bg('../img/page5/card3.png');
+  }
+  .bear {
+    @include size(309,325);
+    @include bgcb('../img/page5/bear4.png',309,170);
+  }
+}
+.swiper-container .page5{
+  background-color: #0097D0;
+  .bg {
+    @include size(594,493);
+    @include bgcb('../img/page6/bg7.png',594,300);
+  }
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,356);
+    @include bg('../img/page6/sphere5.png');
+  }
+  .cloud {
+    @include size(432,160);
+    @include bgcb('../img/page6/weather-cloud.png',432,641);
+  }
+  .bearWrapper {
+    .bear {
+      @include size(230,390);
+      @include bgcb('../img/page6/rider2.png',230,0);
+     
+    }
+    .smoke{
+      @include size(114,26);
+      @include bgcb('../img/page6/shadow.png',114,0);
+    }
+  }
+  
+}
+.swiper-container .page6{
+  background-color: #B626A1;
+  .bg {
+    @include size(588,333);
+    @include bgcb('../img/page6/bg7.png',588,300);
+  }
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,356);
+    @include bg('../img/page7/sphere6.png');
+  }
+  .bear{
+    @include size(285,328);
+    @include bgcb('../img/page7/bear5.png',285,200);
+    .giftWrapper{
+      position: absolute;
+      top:0;
+      left: 50%;
+      .gift1{
+        position: absolute;
+        @include size(39,25);
+        @include bg('../img/page7/gift1.png');
+        // transform: rotate(28deg) translateY(p2r(240));
+      }
+      .gift2{
+        position: absolute;
+        @include size(93,79);
+        @include bg('../img/page7/gift2.png');
+        // transform: rotate(28deg*2) translateY(p2r(240));
+      }
+      .gift3{
+        position: absolute;
+        @include size(72,64);
+        @include bg('../img/page7/gift3.png');
+        // transform: rotate(28deg*3) translateY(p2r(240));
+      }
+      .gift4{
+        position: absolute;
+        @include size(91,73);
+        @include bg('../img/page7/gift4.png');
+        // transform: rotate(28deg*4) translateY(p2r(240));
+      }
+      .gift5{
+        position: absolute;
+        @include size(99,65);
+        @include bg('../img/page7/gift5.png');
+        // transform: rotate(28deg*5) translateY(p2r(240));
+      }
+      .gift6{
+        position: absolute;
+        @include size(107,80);
+        @include bg('../img/page7/gift6.png');
+        // transform: rotate(28deg*6) translateY(p2r(240));
+      }
+      .gift7{
+        position: absolute;
+        @include size(107,80);
+        @include bg('../img/page7/gift7.png');
+        // transform: rotate(28deg*7) translateY(p2r(240));
+      }
+      .gift8{
+        position: absolute;
+        @include size(88,64);
+        @include bg('../img/page7/gift8.png');
+        // transform: rotate(28deg*8) translateY(p2r(240));
+      }
+      .gift9{
+        position: absolute;
+        @include size(78,50);
+        @include bg('../img/page7/gift9.png');
+        // transform: rotate(28deg*9) translateY(p2r(240));
+      }
+      .gift10{
+        position: absolute;
+        @include size(49,37);
+        @include bg('../img/page7/gift10.png');
+        // transform: rotate(28deg*10) translateY(p2r(240));
+      }
+      .gift11{
+        position: absolute;
+        @include size(51,31);
+        @include bg('../img/page7/gift11.png');
+        // transform: rotate(28deg*11) translateY(p2r(240));
+      }
+      .gift12{
+        position: absolute;
+        @include size(37,23);
+        @include bg('../img/page7/gift12.png');
+        // transform: rotate(28deg*12) translateY(p2r(240));
+      }
+    }
+  }
+}
+.swiper-container .page7{
+  background-color: #1A062B;
+  .star{
+    position: absolute;
+    bottom: 0;
+    @include size(640,384);
+    @include bg('../img/page8/sphere7.png');
+  }
+  .streetlightWrapper{
+    .streetlight{
+      position: absolute;
+      @include size(80,448);
+      @include bg('../img/page8/streetlight.png');
+      bottom: p2r(300);
+      left: p2r(240);
+      .light{
+        position: absolute;
+        @include size(437,427);
+        @include bg('../img/page8/lamplight.png');
+        top: p2r(30);
+        left: p2r(-140);
+      }
+    }
+
+  }
+  .moto{
+    position: absolute;
+    left:p2r(125);
+    bottom: p2r(335);
+    @include size(185,123);
+    @include bg('../img/page8/moto.png')
+  }
+  .bear{
+    @include size(276,271);
+    @include bg('../img/page8/bear6.png');
+    position: absolute;
+    bottom: p2r(280);
+    left: p2r(222);
+  }
+  .share{
+    @include size(379,113);
+    @include bgcb('../img/page8/share.png',379,140);
+  }
+  .info {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: p2r(70);
+    font-size: p2r(24);
+    color: #b579d6;
+  }
+}
+
+
+
+/*loading动画的初始样式*/
+.loading{
+  .progress{
+    .step {
+      height: 100%;
+      width:20%;
+      position: absolute;
+      right: 0;
+      -webkit-border-radius:p2r(20);
+      -moz-border-radius:p2r(20);
+      border-radius:p2r(20);
+      background-color: #ff2d4b;
+    }
+  }
+}
+/*loading动画*/
+// 进度条动画
+@keyframes steps {
+  to {
+    width: 100%;
+  }
+}
+// 定义骑手的动画
+@keyframes bearRide {
+  10%{
+    transform:translateX(p2r(-26.8*1)) translateY(p2r(-10));
+  }
+  20%{
+    transform:translateX(p2r(-26.8*2)) translateY(p2r(10));
+  }
+  30%{
+    transform:translateX(p2r(-26.8*3)) translateY(p2r(-10));
+  }
+  40%{
+    transform:translateX(p2r(-26.8*4)) translateY(p2r(10));
+  }
+  50%{
+    transform:translateX(p2r(-26.8*5)) translateY(p2r(-10));
+  }
+  60%{
+    transform:translateX(p2r(-26.8*6)) translateY(p2r(10));
+  }
+  70%{
+    transform:translateX(p2r(-26.8*7)) translateY(p2r(-10));
+  }
+  80%{
+    transform:translateX(p2r(-26.8*8)) translateY(p2r(10));
+  }
+  90%{
+    transform:translateX(p2r(-26.8*9)) translateY(p2r(-10));
+  }
+  100%{
+    transform:translateX(p2r(-26.8*10)) translateY(p2r(0));
+  }
+}
+// loading的触发动画的类
+.loading.animate {
+  .rider {
+    animation: bearRide 1.5s linear;
+    animation-fill-mode: forwards;
+  }
+  .progress{
+    .step{
+      animation: steps 1.5s linear;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+/*welcome页面动画*/
+// .welcome动画的初始的样式
+.welcome {
+  .grass1 {
+    height: p2r(20);
+  }
+  .grass2 {
+    transform: scale(2,1);
+    opacity: 0;
+  }
+  .btnWrapper {
+    opacity: 0;
+  }
+  .tree {
+    opacity: 0;
+    transform: translateY(100%);
+    z-index: 1;
+  }
+  .bearWrapper {
+    opacity: 0;
+    transform: translateY(-100%);
+    .smoke {
+      opacity: 0;
+    }
+  }
+  .title {
+    opacity: 0;
+    .hello {
+      opacity: 0;
+    }
+  }
+}
+
+/*定义welcome动画*/
+// 定义星球的动画（下至上）
+@keyframes bottomtop {
+  from {}
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+// 小草(大变小x轴)
+@keyframes bigwidthnormal {
+    from {
+     
+    }
+    to {
+     transform: scale(1);
+     opacity: 1;
+    }
+    
+}
+
+/*定义按钮的动画（没有-有，小变大）*/
+@keyframes smallBig {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+// 定义旋转360deg
+@keyframes rotate360 {
+  from {}
+
+  to {
+    transform: rotate(360deg);
+    
+  }
+}
+
+/*定义top-bottom*/
+@keyframes topbottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100%)
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+  
+}
+
+// 骑手的动画
+@keyframes ridertopbottom {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+// 长按骑手消失的动画
+@keyframes rider2bottom {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+   transform: translateY(80%) scale(1.5);
+  }
+}
+
+
+// 小熊乱跳的动画
+@keyframes jumpingaround {
+  50% {
+    transform: translateY(-10%);
+  }
+}
+//烟的动画
+@keyframes opacity21 {
+  from {
+    opacity: 0;
+    transform: scale(1.5,1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(.8,1);
+  }
+}
+
+// 定义welcome title(上-下)
+@keyframes top2bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// hello的动画 
+@keyframes opacity2scale {
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes  grass1 {
+  from {
+    height: p2r(20);
+  }
+  to {
+    height: 12.375rem;
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+ 0% {
+   transform: translateY(-50%);
+ }
+ 50% {
+  transform: translateY(0%);
+ }
+ 75% {
+  transform: translateY(-10%);
+ }
+  100% {
+    transform: none;
+    z-index: 1;
+  }
+}
+// 定义长按骑手消失的动画的类
+.welcome.animate .bearWrapper.rider2bottom {
+  animation: rider2bottom 1s ease-in-out;
+}
+// 定义触发welcome动画的类
+.welcome.animate {
+  
+  .grass1 {
+    animation: grass1  .5s forwards;
+  }
+  .grass2 {
+    animation: bigwidthnormal .5s .5s forwards;
+  }
+
+  .btnWrapper {
+    animation: smallBig .5s 1s;
+    animation-fill-mode: forwards;
+    .circle2 {
+      animation: rotate360 1s 1s linear infinite;
+    }
+  }
+  .tree {
+    animation: topbottom 1s 1.5s forwards, shake .3s 2.1s forwards;
+  }
+  .bearWrapper {
+    animation: ridertopbottom .5s 2s forwards;
+    .bear {
+      animation: jumpingaround  .5s 0s infinite;
+    }
+    .smoke {
+          animation: opacity21 .5s 2s infinite;
+    }
+  }
+  .title {
+    animation: top2bottom .5s 2.5s forwards;
+    .hello {
+      animation: opacity2scale .3s 3.2s forwards;
+    }
+  }
+
+}
+
+
+/*滑动页面1的初始样式*/
+.swiper-slide.page1 {
+    .scrollPage1 {
+      .bg {
+        transform-origin: 50% 200%;
+        opacity: 0;
+      }
+      .person {
+        transform-origin: 50% 200%;
+        opacity: 0;
+        .paperWrapper {
+          .paper1{}
+          .paper2{}
+        }
+      }
+      .textWrapper {
+        transform-origin: right bottom;
+        opacity: 0;
+      }
+    }
+    .scrollPage2 {
+      .bg {
+        transform-origin: 50% 200%;
+        opacity: 0;
+      }
+      .person {
+        transform-origin: 50% 200%;
+        opacity: 0;
+        .legWrapper {
+          .leg2 {
+            transform: rotate(30deg);
+            transform-origin: left bottom;
+          }
+        }      
+      }
+      .textWrapper {
+        transform-origin: right bottom;
+        opacity: 0;
+      }
+    }
+    .scrollPage3 {
+      .bg {
+        transform-origin: 50% 200%;
+        opacity: 0;
+      }
+      .person {
+        transform-origin: 50% 200%;
+        opacity: 0;
+      }
+      .textWrapper {
+        transform-origin: right bottom;
+        opacity: 0;
+      }
+    }
+}
+
+/*滑动页面1的动画*/
+@keyframes bgrotate{
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  25%{
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+  45%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  75%{
+    opacity: 1;
+    transform: rotate(5deg);
+  }
+  90% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes textrotate{
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  25%{
+    opacity: 1;
+    transform: rotate(-70deg);
+  }
+  30%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  40%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  45%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  55% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  75%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  80% { 
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  85%{
+    opacity: 1;
+    transform: rotate(30deg);
+  }
+  90% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes paperRock {
+  0%{
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  70% {
+    transform: translateX(-10%);
+  }
+ 100% {
+    transform: none;
+  }
+}
+
+@keyframes textrotate2{
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  25%{
+    opacity: 1;
+    transform: rotate(-70deg);
+  }
+  30%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  40%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  45%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  55% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  75%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  80% { 
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  85%{
+    opacity: 1;
+    transform:none;
+  }
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform:none;
+  }
+}
+@keyframes bgrotate2{
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  25%{
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+  45%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  75%{
+    opacity: 1;
+    transform: none;
+  }
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes wordrock {
+  0% { }
+  25% {
+    transform: translateY(-4%)
+  }
+  50% {
+    transform: translateX(3%)
+  }
+  75% {
+    transform: translateY(2%)
+  }
+  100% {
+    transform: translateX(-5%)
+  }
+}
+@keyframes leg {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/*定义触发滑动页面动画的类*/
+.page1.animate {
+  .scrollPage1 {
+    .bg {
+      animation:  bgrotate 2s forwards;
+    }
+    .person {
+      animation:  bgrotate 3s .8s forwards;
+      .paperWrapper {
+        .paper1{
+          animation: paperRock .5s .8s infinite;
+        }
+        .paper2 {
+          animation: paperRock .5s 1s ease-in-out infinite;
+        }
+      }
+    }
+    .textWrapper {
+      animation:  textrotate 2.5s 1.5s forwards;
+    }
+  }
+  .scrollPage2 {
+    .bg {
+      animation:  bgrotate 2s 4s forwards;
+    }
+    .person {
+      animation:  bgrotate 3.5s 4.5s forwards;
+     .legWrapper {
+      .leg2 {
+        animation: leg .8s 5.5s forwards;
+       }
+     }
+    }
+    .textWrapper {
+      animation:  textrotate 2.5s 5.5s forwards;
+    }
+  }
+  .scrollPage3 {
+    .bg {
+      animation:  bgrotate2 2s 8s forwards;
+    }
+    .person {
+      animation:  bgrotate2 3s 8.5s forwards;
+      .word1{
+        animation: wordrock .6s 8.5s ease-in infinite;
+      }
+      .word2 {
+        animation: wordrock .5s 8.7s ease-in-out infinite;
+      }
+      .word3 {
+        animation: wordrock .4s 8.7s ease infinite;
+      }
+      .word4 {
+        animation: wordrock .4s 8.5s ease infinite;
+      }
+    }
+    .textWrapper {
+      animation:  textrotate2 2.5s 9.5s forwards ;
+    }
+  }
+}
+
+
+/*定义所有滑块的title初始样式*/
+.swiper-slide {
+  .title {
+    h3{
+      transform: translateX(150%);
+      opacity: 0;
+    }
+    p{
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    .line{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+    }
+  }
+}
+/*定义所有滑块title的动画*/
+@keyframes titleline {
+  from {
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes titletxt {
+  from {
+   transform: translateX(100%);
+   opacity: 0;
+  }
+  to {
+   transform: none;
+   opacity: 1;
+  }
+
+}
+
+/*定义所有滑块的title的触发动画的类*/
+.swiper-slide.animate{
+  .title {
+    h3,p{
+      animation: titletxt .5s forwards;
+    }
+    .line{
+      animation: titleline .5s .6s forwards;
+    }
+  }
+}
+
+// 定义滑块2的动画初始样式
+.swiper-slide.page2 {
+  .bg {
+    transform-origin: 50% 200%;
+    opacity: 0;
+  }
+  .table {
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: 1;
+  }
+  .food {
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .star {
+    z-index: 1;
+  }
+  .bearWrapper {
+    .bear {
+      transform: translateY(100%);
+      opacity: 0;
+      .face1 {
+        opacity: 0;
+        transform: scale(0);
+      }
+      .face2{
+        opacity: 0;
+        transform: scale(0);
+        top: -3.1875rem;
+      }
+      .handLeft{
+        transform-origin: left top;
+      }
+      .handRight {
+        transform-origin: right top;
+      }
+      }
+  }
+}
+/*定义所有滑块的2的动画*/
+
+@keyframes Hand1 {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+@keyframes Hand2 {
+from {
+  transform: rotate(15deg);
+}
+to {
+  transform: none;
+}
+}
+/*定义所有滑块的2的触发动画的类*/
+.page2.animate {
+    .bg {
+      animation:  bgrotate2 2s forwards; 
+    }
+    .table {
+      animation: top2bottom 1s .5s forwards;
+    }
+    .bearWrapper {
+      .bear {
+        animation: bottomtop 1s 1s forwards;
+        .face1 {
+          animation: opacity2scale .5s 2.2s forwards;
+        }
+        .face2{
+          animation: opacity2scale .5s 2.7s forwards;
+        }
+        .handLeft{
+          animation: Hand1 .3s 1s linear infinite;
+        }
+        .handRight {
+          animation:  Hand2 .3s 1.5s linear  infinite;
+        }
+      }
+    }
+    .food {
+      animation: top2bottom 1s 1.5s forwards;
+    }
+}
+
+
+// 定义滑块3的动画初始样式
+.swiper-slide.page3 {
+  .bg {
+    transform: rotate(90deg);
+    transform-origin: 50% 200%;
+  }
+  .bear {
+    opacity: 0;
+  }
+  .bear1 {
+    @include size(251,335);
+    @include bgcb('../img/page4/bear3-1-1.png',251,195);
+    opacity: 0;
+  }
+  .bear2 {
+    @include size(251,313);
+    @include bgcb('../img/page4/bear3-2-1.1.png',251,195);
+    opacity: 0;
+  }
+  .bear3 {
+    @include size(290,321);
+    @include bgcb('../img/page4/bear3-3-1.png',290,195);
+    opacity: 0;
+  }
+  .sloganWrapper {
+    .slogan1{
+      opacity: 0;
+   
+    }
+    .slogan2{
+      opacity: 0;
+      transform: scale(0);
+    }
+    .slogan3{
+      opacity: 0;
+      transform: scale(0);
+    }
+    .license1{opacity: 0;@include size(228,151); @include bg("../img/page4/license1.png");position: absolute;left: p2r(40);bottom:p2r(500)}
+    .license2{opacity: 0;@include size(231,156); @include bgcb("../img/page4/oil1.png",231,660)}
+    .license3{opacity: 0;@include size(211,173); @include bg("../img/page4/evil21.png");position: absolute;right: p2r(30);bottom:p2r(480)}
+  }
+  
+}
+// 定义滑块三的动画
+@keyframes cardshake{
+  0% {
+    transform: translateY(-5%);
+    
+  }
+  20% {
+    transform: translateX(2%);
+
+
+  }
+ 30% {
+    transform: translateY(2%);
+
+  }
+  40% {
+    transform: translateX(-4%);
+
+  }
+  50% {
+    transform: translateY(-3%);
+
+  }
+  60% {
+    transform: translateY(5%);
+
+  }
+  70% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: none;
+  }
+
+}
+
+@keyframes orgin2bottom {
+  from {
+    opacity: 1,
+  }
+
+
+  to {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+}
+
+
+
+// 定义触发滑块三动画的样式
+.page3.animate {
+  .bg {
+    animation: bgrotate2 3s forwards;
+  }
+  .bear {
+    animation: top2bottom 1s .5s forwards;
+  }
+  .sloganWrapper {
+    .slogan1 {
+      animation: opacity2scale .5s 1.2s forwards,cardshake 1s 1.2s ease infinite;
+    }
+    .slogan2 {
+      animation: opacity2scale 0.5s 1.5s forwards,cardshake .7s 2s ease-out infinite alternate;
+    }
+    .slogan3 {
+      animation: opacity2scale 0.5s 2s forwards,cardshake .8s 2.5s ease-in-out infinite alternate;
+    }
+  }
+
+}
+
+  
+
+// 定义滑动页面4动画的初始样式
+.swiper-slide.page4 {
+  .bg {
+    transform: rotate(90deg);
+    transform-origin: 50% 200%;
+    opacity: 0;
+  }
+  .bear {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .card1{opacity: 0;transform: scale(0);transform-origin: left bottom}
+  .card2{opacity: 0;transform: scale(0);transform-origin: left bottom}
+  .card3{opacity: 0;transform: scale(0);transform-origin: left bottom}
+}
+// 定义滑动页面4动画
+@keyframes card {
+  from {opacity: 0;transform: scale(0)}
+  90% {opacity: 1;transform: scale(1.5)}
+  to {opacity: 1;transform: scale(1)}
+}
+// 定义滑动页面4动画的触发的类
+.page4.animate{
+  .bg {
+    animation: bgrotate2 3s forwards;
+  }
+  .bear {
+    animation: top2bottom 1s .5s forwards;
+  }
+  .card1{
+    animation: card 1s 1s forwards;
+  }
+  .card2{ animation: card  1s 1s forwards;}
+  .card3{ animation: card  1s 1s forwards;}
+}
+
+// 定义滑动页面4动画的初始样式
+.swiper-slide.page5 {
+
+  .cloud {
+    opacity: 0;
+      }
+      .bg {
+        transform: rotate(90deg);
+        transform-origin: 50% 200%;
+      }
+      .bearWrapper {
+        width: 7.1875rem;
+        height: 12.1875rem;
+        position: absolute;
+        bottom: 5.46875rem;
+        left: 50%;
+        margin-left: -3.59375rem;
+        .bear {
+          opacity: 0;
+        }
+        .smoke {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+    
+
+}
+// 定义滑动页面5动画
+@keyframes opacity2scale2 {
+  from {
+    opacity: 1;
+    transform: scale(0)
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.5)
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+// 滑动页面5动画的初始样式
+.swiper-slide.page5 {
+  .cloud{
+    .snowWrapper {
+      position: absolute;
+      left: 0;
+      bottom:0;
+      width: 100%;
+      
+      .snow1{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        left: -10%;
+        opacity: 0;
+      }
+      .snow2{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        left: 80%;
+        opacity: 0;
+      }
+      .snow3{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        left: 7%;
+        opacity: 0;
+      }
+      .snow4{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        right :12%;
+        opacity: 0;
+      }
+      .snow5{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        right :35%;
+        opacity: 0;
+      }
+      .snow6{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        right :5%;
+        opacity: 0;
+      }
+      .snow7{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        right :-120%;
+        opacity: 0;
+      }
+      .snow8{
+        @include bg('../img/page6/snow-piece.png');
+        @include size(32,32);
+        position: absolute;
+        bottom: -100%;
+        right :75%;
+        opacity: 0;
+      }
+    }
+    .windWrapper {
+      .wind1{
+        @include bg('../img/page6/wind-trace.png');
+        @include size(60,68);
+        position: absolute;
+        bottom: -50%;
+        right :75%;
+        opacity: 0;
+      }
+      .wind2{
+        @include bg('../img/page6/wind-trace.png');
+        @include size(60,68);
+        position: absolute;
+        bottom: -70%;
+       left :75%;
+       opacity: 0;
+      }
+      .wind3{
+        @include bg('../img/page6/wind-trace.png');
+        @include size(60,68);
+        position: absolute;
+        bottom: -20%;
+        left :35%;
+        opacity: 0;
+      }
+      .wind4{
+        @include bg('../img/page6/wind-trace.png');
+        @include size(60,68);
+        position: absolute;
+        bottom: -60%;
+       left :15%;
+       opacity: 0;
+      }
+    }
+    .rainWrapper {
+      .rain1 {
+        @include bg('../img/page6/rain1.png');
+        @include size(437,430);
+        position: absolute;
+        bottom: -150%;
+        left :30%;
+        opacity: 0;
+      }
+      .rain2 {
+        @include bg('../img/page6/rain9.png');
+        @include size(434,379);
+        position: absolute;
+        bottom: -200%;
+        left :25%;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// 定义滑动页面5的动画
+@keyframes snow {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  30% {
+    opacity: .8;
+    transform: translateY(50%) translateX(30%);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(150%) translateX(70%);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(200%) translateX(-70%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(250%) translateX(10%);
+  }
+  60%{
+    opacity: 1;
+    transform: translateY(450%) translateX(-10%);
+  }
+  
+  65% {
+    opacity: 1;
+    transform: translateY(500%) translateX(-10%);
+  }
+  75% {
+    opacity: .8;
+    transform: translateY(700%) translateX(30%);
+  }
+  90% {
+    opacity:.5;
+    transform: translateY(1000%) translateX(-60%);
+  }
+  100% {
+    opacity:0;
+    transform: translateY(1000%) translateX(60%);
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform:none;
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-50%) translateY(50%);
+    opacity: .5;
+  }
+  65% {
+    transform: translateX(-80%) translateY(80%);
+    opacity: .8;
+  }
+  75% {
+    transform: translateX(-100%) translateY(100%);
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(-130%) translateY(110%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%) translateY(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes rain {
+  20% {
+    transform: translateX(-50%) translateY(50%);
+    opacity: .8;
+  }
+  50% {
+    transform: translateX(-57%) translateY(82%);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-80%) translateY(90%);
+    opacity: .3;
+  }
+  100% {
+    transform: translateX(-100%) translateY(100%);
+    opacity: 0;
+  }
+}
+// 定义滑动页面5动画的触发的类
+.page5.animate {
+  .cloud {
+    animation: opacity2scale2 1s forwards,wordrock .5s 1s infinite;
+    .snowWrapper {    
+      .snow1{
+       animation: snow 1.2s 1.2s ease infinite;
+      }
+      .snow2{
+        animation: snow 1.2s 1.5s ease-in infinite;
+      }
+      .snow3{
+       animation: snow 1.2s 2s ease-out infinite;
+      }
+      .snow4{
+         animation: snow 1.2s 1s ease-in-out infinite;
+      }
+      .snow5{
+        animation: snow 1.2s 1.3s  ease infinite;
+      }
+      .snow6{
+        animation: snow 1.2s 1.7s ease-in infinite; 
+      }
+      .snow7{
+         animation: snow 1.2s 1.6s ease infinite;
+      }
+      .snow8{
+        animation: snow 1.2s 2s infinite;
+      }
+    }
+    .windWrapper {
+      .wind1{
+        animation: wind 1.2s 1s ease-in-out infinite;
+      }
+      .wind2{
+        animation: wind 1.2s 1.5s infinite;
+      }
+      .wind3{
+        animation: wind 1.2s 1.8s ease infinite;
+      }
+      .wind4{
+        animation: wind 1.2s 2s ease-out infinite;
+      }
+    }
+    .rainWrapper {
+      .rain1 {
+       animation:  rain 2s 2s linear infinite;
+      }
+      .rain2 {
+        animation:  rain 1s 2.5s ease-out infinite;
+      }
+    }
+  }
+  .bg {
+    animation : bgrotate2 2s 1s forwards;
+  }
+  .bearWrapper {
+    animation: jumpingaround  .5s 0s infinite;
+    .bear {
+      animation: top2bottom .7s 1.5s forwards;
+     
+    }
+    .smoke {
+      animation: opacity21 .5s 2s infinite;
+    }
+  }
+  
+}
+
+
+// 滑块6
+.swiper-slide.page6 {
+  .bg {
+    transform: rotate(90deg);
+    transform-origin: 50% 200%;
+    @include bg('../img/page7/bg8.png');
+  }
+  .bear {
+    .giftWrapper> {
+    div:nth-child(1){
+        position: absolute;
+        @include size(39,25);
+        transform: rotate(28deg) translateY(p2r(240));
+      }
+    div:nth-child(2){
+        position: absolute;
+        @include size(93,79);
+        transform: rotate(28deg*2) translateY(p2r(240));
+      }
+    div:nth-child(3){
+        position: absolute;
+        @include size(72,64);
+        transform: rotate(28deg*3) translateY(p2r(240));
+      }
+    div:nth-child(4){
+        position: absolute;
+        @include size(91,73);
+        transform: rotate(28deg*4) translateY(p2r(240));
+      }
+    div:nth-child(5){
+        position: absolute;
+        @include size(99,65);
+        transform: rotate(28deg*5) translateY(p2r(240));
+      }
+    div:nth-child(6){
+        position: absolute;
+        @include size(107,80);
+        transform: rotate(28deg*6) translateY(p2r(240));
+      }
+    div:nth-child(7){
+        position: absolute;
+        @include size(107,80);
+        transform: rotate(28deg*7) translateY(p2r(240));
+      }
+    div:nth-child(8){
+        position: absolute;
+        @include size(88,64);
+        transform: rotate(28deg*8) translateY(p2r(240));
+      }
+    div:nth-child(9){
+        position: absolute;
+        @include size(78,50);
+        transform: rotate(28deg*9) translateY(p2r(240));
+      }
+      div:nth-child(10){
+        position: absolute;
+        @include size(49,37);
+
+        transform: rotate(28deg*10) translateY(p2r(240));
+      }
+      div:nth-child(11){
+        position: absolute;
+        @include size(51,31);
+
+        transform: rotate(28deg*11) translateY(p2r(240));
+      }
+      div:nth-child(12){
+        position: absolute;
+        @include size(37,23);
+
+        transform: rotate(28deg*12) translateY(p2r(240));
+      }
+    }
+    .giftWrapper>div {
+      opacity: 0;
+      
+    }
+  }
+
+}
+
+@keyframes nonenormal {
+  from {
+    transform: none;
+  }  
+
+  to {
+    opacity: 1
+  }
+}
+
+// 滑块6触发的动画类
+.page6.animate {
+  .bg {
+    animation : bgrotate2 2s  forwards;
+  }
+  .bear {
+    .giftWrapper>div{
+      animation:  nonenormal 3s 1s infinite;
+    }
+    @for $i from 1 through 12 {
+      .giftWrapper>div:nth-child(#{$i})>div{
+          animation: rotate360 1s $i*.8s infinite;
+      }
+  }
+  }
+}
+
+// 音乐
+.music {
+  @include size(36,36);
+  position: fixed;
+  right: p2r(30);
+  top:p2r(30);
+  z-index: 99;
+  .btnMusic{
+    @include size(36,36);
+    background: url(../img/play.png) no-repeat center /100% 100%;
+  }
+}

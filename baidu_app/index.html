@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>百度外卖WebApp</title>
+    <!--设置html的font-size-->
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px';
+        window.onresize = function () {
+            document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px';
+        };
+    </script>
+    <!--引入index.css（已经把swiper.min.scss和base.scss和nomalize.scss编译成index.css）-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--loading-->
+<div class="loading">
+    <div class="rider"></div>
+    <div class="progress">
+        <div class="step"></div>
+    </div>
+    <div class="info"></div>
+    <div class="logo"></div>
+    <div class="copyright">
+        @ 2017 Baidu Waimai Produced
+    </div>
+</div>
+<!--welcome-->
+<div class="welcome">
+    <!--title标题-->
+    <div class="title">
+        <!--hello-->
+        <div class="hello"></div>
+    </div>
+    <!--云朵-->
+    <div class="cloud"></div>
+    <!--树-->
+    <div class="tree"></div>
+    <!--大草地-->
+    <div class="grass1"></div>
+    <!--小草地-->
+    <div class="grass2"></div>
+    <!--小熊-->
+    <div class="bearWrapper">
+        <div class="bear"></div>
+        <div class="smoke"></div>
+    </div>
+    <!--btn-->
+    <div class="btnWrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="btn"></div>
+    </div>
+    <!--text-->
+    <div class="text">长按启动，观外卖之路</div>
+</div>
+<!--swiper-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--滑动页面1-->
+        <div class="swiper-slide page1">
+            <div class="title">
+                <h3>生活中，</h3>
+                <p>经常有这种时候...</p>
+                <div class="line"></div>
+            </div>
+            <!--动画的盒子1-->
+            <div class="scrollPage1">
+                <div class="bg"></div>
+                <div class="person">
+                    <div class="paperWrapper">
+                        <div class="paper1"></div>
+                        <div class="paper2"></div>
+                    </div>
+                </div>
+                <div class="textWrapper">
+                    <div class="text"></div>
+                </div>
+            </div>
+            <!--动画的盒子2-->
+            <div class="scrollPage2">
+                <div class="bg"></div>
+                <div class="person">
+                    <div class="legWrapper">
+                        <div class="leg1"></div>
+                        <div class="leg2"></div>
+                    </div>
+                </div>
+                <div class="textWrapper">
+                    <div class="text"></div>
+                </div>
+            </div>
+            <!--动画的盒子3-->
+            <div class="scrollPage3">
+                <div class="bg"></div>
+                <div class="person">
+                    <div class="word1"></div>
+                    <div class="word2"></div>
+                    <div class="word3"></div>
+                    <div class="word4"></div>
+                </div>
+                <div class="textWrapper">
+                    <div class="text"></div>
+                </div>
+            </div>
+            <!--星球-->
+            <div class="star"></div>
+            <!--小熊-->
+            <div class="bear"></div>
+        </div>
+        <!--滑动页面2-->
+        <div class="swiper-slide page2">
+            <div class="title">
+                <h3>这时候</h3>
+                <p>如果有一份美味的外卖...<br />正好出现...</p>
+                <div class="line"></div>
+            </div>
+            <div class="bg"></div>
+            <div class="star"></div>
+            <div class="bearWrapper">
+                <div class="bear">
+                    <div class="face1"></div>
+                    <div class="face2"></div>
+                    <div class="handLeft"></div>
+                    <div class="handRight"></div>
+                </div>
+            </div>
+            <div class="table"></div>
+            <div class="food"></div>
+        </div>
+        <!--滑动页面3-->
+        <div class="swiper-slide page3">
+            <div class="title">
+                <h3>生活中，</h3>
+                <p>经常有这种时候...</p>
+                <div class="line"></div>
+            </div>
+            <div class="bg"></div>
+            <div class="star"></div>
+            <div class="sloganWrapper">
+                <div class="slogan1"></div>
+                <div class="slogan2"></div>
+                <div class="slogan3"></div>
+                <div class="license1"></div>
+                <div class="license2"></div>
+                <div class="license3"></div>
+            </div>
+           <div class="bearSkillWrapper">
+            <div class="bear"></div>
+            <div class="bear1"></div>
+            <div class="bear2"></div>
+            <div class="bear3"></div>
+           </div>
+        </div>
+        <!--滑动页面4-->
+        <div class="swiper-slide page4">
+            <div class="title">
+                <h3>百度外卖</h3>
+                <p>只做有品质的外卖...<br/>操作快捷...</p>
+                <div class="line"></div>
+            </div>
+            <div class="bg"></div>
+            <div class="star"></div>
+            <div class="card1"></div>
+            <div class="card2"></div>
+            <div class="card3"></div>
+            <div class="bear"></div>
+        </div>
+        <!--滑动页面5-->
+        <div class="swiper-slide page5">
+            <div class="title">
+                <h3>无论前方</h3>
+                <p>狂风，大雨，还是飘雪...<br />始终坚持在路上...</p>
+                <div class="line"></div>
+            </div>
+            <div class="bg"></div>
+            <div class="star"></div>
+            <div class="cloud">
+                <div class="snowWrapper">
+                    <div class="snow1"></div>
+                    <div class="snow2"></div>
+                    <div class="snow3"></div>
+                    <div class="snow4"></div>
+                    <div class="snow5"></div>
+                    <div class="snow6"></div>
+                    <div class="snow7"></div>
+                    <div class="snow8"></div>
+                </div>
+                <div class="windWrapper">
+                    <div class="wind1"></div>
+                    <div class="wind2"></div>
+                    <div class="wind3"></div>
+                    <div class="wind4"></div>
+                </div>
+                <div class="rainWrapper">
+                    <div class="rain1"></div>
+                    <div class="rain2"></div>
+                </div>
+            </div>
+            <div class="bearWrapper">
+                <div class="bear"></div>
+                <div class="smoke"></div>
+            </div>
+        </div>
+        <!--滑动页面6-->
+        <div class="swiper-slide page6">
+            <div class="title">
+                <h3>丰富礼品</h3>
+                <p>让你边吃，边省钱...</p>
+                <div class="line"></div>
+            </div>
+            <div class="bg"></div>
+            <div class="star"></div>
+            <div class="bear">
+                <div class="giftWrapper">
+                    <div><div class="gift1"></div></div>
+                    <div><div class="gift2"></div></div>
+                    <div><div class="gift3"></div></div>
+                    <div><div class="gift4"></div></div>
+                    <div><div class="gift5"></div></div>
+                    <div><div class="gift6"></div></div>
+                    <div><div class="gift7"></div></div>
+                    <div><div class="gift8"></div></div>
+                    <div><div class="gift9"></div></div>
+                    <div><div class="gift10"></div></div>
+                    <div><div class="gift11"></div></div>
+                    <div><div class="gift12"></div></div>
+                </div>
+            </div>
+        </div>
+        <!--滑动页面7-->
+        <div class="swiper-slide page7">
+            <div class="title">
+                <h3>所有的努力</h3>
+                <p>就是为了健康美味的食物...<br />呈现给你...</p>
+                <div class="line"></div>
+            </div>
+            <div class="streetlightWrapper">
+                <div class="streetlight">
+                    <div class="light"></div>
+                </div>
+            </div>
+            <div class="star"></div>
+            <div class="moto"></div>
+            <div class="bear"></div>
+            <div class="share"></div>
+            <div class="info">waimai.baidu.com</div>
+        </div>
+
+    </div>
+</div>
+ <!-- music播放按钮-->
+ <audio src="music/hlw.mp3"></audio>
+ <div class="music">
+     <input type="button" class="btnMusic">
+ </div>
+</body>
+<!--引入swiper.js资源-->
+<script src="lib/swiper/swiper.min.js"></script>
+<!--引入zepto资源-->
+<script src="lib/zepto/zepto.js"></script>
+<script src="lib/zepto/event.js"></script>
+<script src="lib/zepto/touch.js"></script>
+<script src="lib/zepto/fx.js"></script>
+<script src="lib/zepto/fx_methods.js"></script>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,30 @@
+/*使用函数*/
+@function p2r($size) {
+  @return ($size/32)*1rem;
+}
+/*使用混入*/
+/*背景居中向上对齐*/
+@mixin bgct($url,$width,$top){
+  position: absolute;
+  top:($top/32)*1rem;
+  left: 50%;
+  margin-left:(-$width/32/2)*1rem;
+  background: url($url)no-repeat center /100% 100%;
+}
+/*背景居中向下对齐*/
+@mixin bgcb($url,$width,$bottom){
+  position: absolute;
+  bottom:($bottom/32)*1rem;
+  left: 50%;
+  margin-left:(-$width/32/2)*1rem;
+  background: url($url)no-repeat center /100% 100%;
+}
+/*设置背景图*/
+@mixin bg ($url) {
+  background: url($url)no-repeat center /100% 100%;
+}
+/*设置尺寸*/
+@mixin size($width,$height){
+  width: p2r($width);
+  height: p2r($height);
+}

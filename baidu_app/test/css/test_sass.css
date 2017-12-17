@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*sass的函数语法
+  函数可以把一些运算的功能抽取出来作为函数，
+*/
+body {
+  width: 9.375rem;
+}
+
+/*混入*/
+/*使用mixin（要通过@include关键字调用）*/
+.box {
+  position: absolute;
+  left: 50%;
+  margin-left: -5rem;
+  background: url("../img/loading-txt.png") no-repeat center/100% 100%;
+}

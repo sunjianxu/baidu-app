@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //console.log(window.screen.availWidth); //可视宽度
+        //console.log(window.screen.width)//屏幕的宽度
+
+        //动态设置html的font-size大小
+       //假设把设计稿的宽度分为20份
+       document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px';
+       //设置在开发调试时切换设备时立即更新
+        window.onresize = function () {
+            document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px';
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

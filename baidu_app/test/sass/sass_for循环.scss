@@ -1,0 +1,5 @@
+@for $i from 1 through 12 {
+    .giftWrapper>div:nth-child(#{$i})>div{
+        animation: rotate360 .5s $i*.1s infinite;
+    }
+}
